@@ -1,0 +1,12 @@
+ET-45638 | Car | 10 Birr
+DR-475 | Bike | 5 Birr
+ET434636 | Car | 10 Birr
+ET4957 | Car | 10 Birr
+JH648809 | Car | 10 Birr
+3212 | Bike | 5 Birr
+834822 | Truck | 15 Birr
+30956 | Car | 10 Birr
+et | Truck | 15 Birr
+121621 | Truck | 15 Birr
+ET72375 | Car | 10 Birr
+jy77258 | Bike | 5 Birr
