@@ -137,7 +137,6 @@ switch(choice){
         UI::setColor("red");
         cout << "Invalid Choice. Try Again." << endl;
         UI::resetColor();
-
         UI::delay(2);
 
         parkVehicle(); // re-open same menu

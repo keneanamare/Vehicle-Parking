@@ -20,9 +20,7 @@ void UI::loadingAnimation() {
     cout << "Loading System";
 
     for(int i = 0; i < 5; i++) {
-
         cout << ".";
-
         usleep(400000);
     }
 

@@ -6,7 +6,6 @@
 class User {
 
 public:
-
     void userMenu(ParkingSystem &system);
 };
 

@@ -7,7 +7,6 @@ using namespace std;
 class UI {
 
 public:
-
     static void loadingAnimation();
 
     static void showWelcome();

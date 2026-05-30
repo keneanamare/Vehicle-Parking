@@ -10,7 +10,6 @@ void User::userMenu(ParkingSystem &system) {
     int choice;
 
     do {
-
         UI::clearScreen();
 
         cout << endl;
@@ -45,9 +44,7 @@ void User::userMenu(ParkingSystem &system) {
             case 1:
 
                 UI::clearScreen();
-
                 system.showSlots();
-
                 UI::pauseScreen();
 
                 break;
@@ -55,9 +52,7 @@ void User::userMenu(ParkingSystem &system) {
             case 2:
 
                 UI::clearScreen();
-
                 system.parkVehicle();
-
                 UI::pauseScreen();
 
                 break;
@@ -65,9 +60,7 @@ void User::userMenu(ParkingSystem &system) {
             case 3:
 
                 UI::clearScreen();
-
                 system.exitVehicle();
-
                 UI::pauseScreen();
 
                 break;
@@ -75,15 +68,10 @@ void User::userMenu(ParkingSystem &system) {
             case 0:
 
                 UI::clearScreen();
-
                 UI::setColor("cyan");
-
                 UI::loadingMessage("Returning To Main Menu");
-
                 UI::resetColor();
-
                 UI::clearScreen();
-
                 UI::delay(1);
 
                 break;
@@ -91,11 +79,8 @@ void User::userMenu(ParkingSystem &system) {
             default:
 
                 UI::setColor("red");
-
                 cout << "\nInvalid Choice!" << endl;
-
                 UI::resetColor();
-
                 UI::delay(1);
         }
 

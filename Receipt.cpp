@@ -55,6 +55,7 @@ void Receipt::displayReceipt() {
 
     char* entryDate = ctime(&entryTime);
      cout << "  Entry Time : " << entryDate;
+
     char* exitDate = ctime(&exitTime);
      cout << "  Exit Time  : " << exitDate;
 

@@ -17,11 +17,9 @@ Vehicle::Vehicle(string plate, string type) {
 string Vehicle::getPlateNumber() {
     return plateNumber;
 }
-
 string Vehicle::getVehicleType() {
     return vehicleType;
 }
-
 time_t Vehicle::getEntryTime() {
     return entryTime;
 }

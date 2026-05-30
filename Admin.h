@@ -20,7 +20,6 @@ public:
     Admin();
 
     bool login();
-
     void adminMenu(ParkingSystem &system);
 };
 

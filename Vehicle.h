@@ -40,7 +40,6 @@ public:
 class Car : public Vehicle {
 public:
     Car(string plate);
-
     double calculateFee(int hours) override;
 };
 
@@ -51,7 +50,6 @@ public:
 class Bike : public Vehicle {
 public:
     Bike(string plate);
-
     double calculateFee(int hours) override;
 };
 
@@ -62,7 +60,6 @@ public:
 class Truck : public Vehicle {
 public:
     Truck(string plate);
-
     double calculateFee(int hours) override;
 };
 
@@ -75,7 +72,6 @@ class Bus : public Vehicle
 public:
 
     Bus(string plate);
-
     double calculateFee(int hours) override;
 
 };
@@ -88,8 +84,7 @@ class Motorcycle : public Vehicle
 {
 public:
 
-     Motorcycle(string plate);
-
+    Motorcycle(string plate);
     double calculateFee(int hours) override;
 
 };

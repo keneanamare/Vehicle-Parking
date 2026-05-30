@@ -35,7 +35,6 @@ bool Admin::login() {
 
         cout << "Enter Username : ";
         cin >> user;
-
         cout << "Enter Password : ";
         cin >> pass;
 
@@ -89,7 +88,6 @@ void Admin::adminMenu(ParkingSystem &system) {
     int adminChoice;
 
     do {
-
         UI::clearScreen();
 
         cout << endl;
@@ -119,9 +117,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 1:
 
                 UI::clearScreen();
-
                 system.showRevenue();
-
                 UI::pauseScreen();
 
                 break;
@@ -129,9 +125,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 2:
 
                 UI::clearScreen();
-
                 system.viewHistory();
-
                 UI::pauseScreen();
 
                 break;
@@ -139,9 +133,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 3:
 
                 UI::clearScreen();
-
                 system.searchVehicle();
-
                 UI::pauseScreen();
 
                 break;
@@ -149,9 +141,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 4:
 
                 UI::clearScreen();
-
                 system.showStatistics();
-
                 UI::pauseScreen();
 
                 break;
@@ -159,9 +149,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 5:
 
                 UI::clearScreen();
-
                 system.showParkingOverview();
-
                 UI::pauseScreen();
 
                 break;
@@ -169,9 +157,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 6:
 
                 UI::clearScreen();
-
                 system.generateDailyReport();
-
                 UI::pauseScreen();
 
                 break;
@@ -179,9 +165,7 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 7:
 
                 UI::clearScreen();
-
                 system.showParkingMap();
-
                 UI::pauseScreen();
 
                 break;
@@ -189,15 +173,10 @@ void Admin::adminMenu(ParkingSystem &system) {
             case 0:
 
                 UI::clearScreen();
-
                 UI::setColor("cyan");
-
                 UI::loadingMessage("Returning To Main Menu");
-
                 UI::resetColor();
-
                 UI::clearScreen();
-
                 UI::delay(1);
 
                 break;
@@ -205,11 +184,8 @@ void Admin::adminMenu(ParkingSystem &system) {
             default:
 
                 UI::setColor("red");
-
                 cout << "\nInvalid Choice!" << endl;
-
                 UI::resetColor();
-
                 UI::delay(1);
             
         }

@@ -1,3 +1,4 @@
+## History stored here ##
 ET-45638 | Car | 10 Birr
 DR-475 | Bike | 5 Birr
 ET434636 | Car | 10 Birr

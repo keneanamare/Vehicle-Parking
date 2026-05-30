@@ -57,7 +57,7 @@ Public getter and setter functions provide controlled access to data.
 The project uses single inheritance.
 
 Example:
-class Car : public Vehicle
+    class Car : public Vehicle
 
 How to compile and run the program
 

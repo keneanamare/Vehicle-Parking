@@ -17,7 +17,6 @@ private:
 
     int slotNumber;
     double totalFee;
-    
     int hours;
     int remainingMinutes;
 

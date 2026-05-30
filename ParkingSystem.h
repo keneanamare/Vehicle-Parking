@@ -15,7 +15,6 @@ using namespace std;
 class ParkingSystem {
 
 private:
-
     vector<ParkingSlot> slots;
     vector<Ticket> tickets;
     vector<Receipt> receipts;

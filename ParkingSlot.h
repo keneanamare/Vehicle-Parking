@@ -6,6 +6,7 @@ using namespace std;
 
 class ParkingSlot {
 private:
+
     int slotID;
     string slotType;
     bool occupied;

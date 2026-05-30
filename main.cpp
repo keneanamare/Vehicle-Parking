@@ -16,7 +16,6 @@ int main() {
     int choice;
 
     UI::showWelcome();
-
     UI::showDateTime();
 
     do {

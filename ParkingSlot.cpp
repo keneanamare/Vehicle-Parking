@@ -34,11 +34,9 @@ void ParkingSlot::freeSlot() {
 int ParkingSlot::getSlotID() {
     return slotID;
 }
-
 string ParkingSlot::getSlotType() {
     return slotType;
 }
-
 bool ParkingSlot::isOccupied() {
     return occupied;
 }
