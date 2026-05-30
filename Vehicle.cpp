@@ -48,8 +48,7 @@ Vehicle::~Vehicle() {
 // =========================================
 
 Car::Car(string plate)
-    : Vehicle(plate, "Car") {
-}
+    : Vehicle(plate, "Car") {}
 
 double Car::calculateFee(int hours) {
     return hours * 10;
@@ -60,8 +59,7 @@ double Car::calculateFee(int hours) {
 // =========================================
 
 Bike::Bike(string plate)
-    : Vehicle(plate, "Bike") {
-}
+    : Vehicle(plate, "Bike") {}
 
 double Bike::calculateFee(int hours) {
     return hours * 5;
@@ -72,9 +70,30 @@ double Bike::calculateFee(int hours) {
 // =========================================
 
 Truck::Truck(string plate)
-    : Vehicle(plate, "Truck") {
-}
+    : Vehicle(plate, "Truck") {}
 
 double Truck::calculateFee(int hours) {
     return hours * 15;
+}
+// ========================================
+// Bus IMPLEMENTATION
+// ========================================
+Bus::Bus(string plate)
+    : Vehicle(plate, "Bus"){}
+
+double Bus::calculateFee(int hours)
+{
+    return hours * 20;
+}
+
+// ========================================
+// MOTORCYCLE IMPLEMENTATION
+// ========================================
+
+Motorcycle::Motorcycle(string plate)
+    : Vehicle(plate, "Motorcycle"){}
+
+double Motorcycle::calculateFee(int hours)
+{
+    return hours * 20;
 }

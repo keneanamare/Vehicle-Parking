@@ -66,4 +66,32 @@ public:
     double calculateFee(int hours) override;
 };
 
+// =========================================
+// BUS CLASS
+// =========================================
+
+class Bus : public Vehicle
+{
+public:
+
+    Bus(string plate);
+
+    double calculateFee(int hours) override;
+
+};
+
+// =========================================
+// MOTORCYCLE CLASS
+// =========================================
+
+class Motorcycle : public Vehicle
+{
+public:
+
+     Motorcycle(string plate);
+
+    double calculateFee(int hours) override;
+
+};
+
 #endif

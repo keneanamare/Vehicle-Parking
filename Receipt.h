@@ -12,13 +12,14 @@ private:
 
     string vehicleType;
     string plateNumber;
+    time_t entryTime;
+    time_t exitTime;
 
     int slotNumber;
-
     double totalFee;
-    int duration;
-
-    time_t exitTime;
+    
+    int hours;
+    int remainingMinutes;
 
 public:
     // Constructor
@@ -29,7 +30,9 @@ public:
         string plate,
         int slot,
         double fee,
-        int hours
+        time_t entry,
+        int h,
+        int minutes
     );
 
     // Display Receipt

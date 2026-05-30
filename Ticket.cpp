@@ -1,4 +1,5 @@
 #include "Ticket.h"
+#include "UI.h"
 
 // =========================================
 // CONSTRUCTOR
@@ -9,15 +10,14 @@ Ticket::Ticket(
     int slot,
     string plate,
     string type,
-    time_t time
-) {
+    time_t entryTime
+)
+{
     ticketID = id;
     slotNumber = slot;
-
     plateNumber = plate;
     vehicleType = type;
-
-    entryTime = time;
+    this->entryTime = entryTime;
 }
 
 // =========================================
@@ -52,20 +52,43 @@ void Ticket::displayTicket() {
 
     cout << endl;
     cout << "=================================" << endl;
+    UI::setColor("yellow");
     cout << "        PARKING TICKET           " << endl;
+    UI::resetColor();
     cout << "=================================" << endl;
 
-    cout << "Ticket ID      : "
-         << ticketID << endl;
+    cout << "   Ticket ID      : " << ticketID << endl;
+    cout << "   Vehicle Type   : " << vehicleType << endl;
+    cout << "   Plate Number   : " << plateNumber << endl;
+    cout << "   Allocated Slot : " << slotNumber << endl;
 
-    cout << "Vehicle Type   : "
-         << vehicleType << endl;
+    cout << "=================================" << endl;
+}
 
-    cout << "Plate Number   : "
-         << plateNumber << endl;
+// ==========================================
+//        DISPLAY TICKET
+// ==========================================
+void Ticket::displayQRCode(){
+    cout << endl;
+    cout << "+----------------------+" << endl;
+    srand(ticketID);
 
-    cout << "Allocated Slot : "
-         << slotNumber << endl;
+    for(int i = 0; i < 5; i++){
+        cout << "| ";
 
+        for(int j = 0; j < 20; j++){
+            if(rand() % 2 == 0)
+                cout << "#";
+            else
+                cout << " ";
+        }
+
+        cout << " |" << endl;
+    }
+    cout << "+----------------------+" << endl;
+
+    cout << endl;
+
+    cout << "QR Verification Active" << endl;
     cout << "=================================" << endl;
 }

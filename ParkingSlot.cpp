@@ -1,4 +1,5 @@
 #include "ParkingSlot.h"
+#include "UI.h"
 
 // =========================================
 // CONSTRUCTOR
@@ -48,13 +49,17 @@ bool ParkingSlot::isOccupied() {
 
 void ParkingSlot::displaySlot() {
 
-    cout << "Slot " << slotID
-         << " [" << slotType << "] : ";
+    cout << "Slot " << slotID << " [" << slotType << "] : ";
 
-    if (occupied)
+    if(occupied){
+        UI::setColor("red");
         cout << "Occupied";
-    else
+        UI::resetColor();
+    }
+    else{
+        UI::setColor("green");
         cout << "Available";
-
+        UI::resetColor();
+    }
     cout << endl;
 }

@@ -26,5 +26,4 @@ public:
     // Display Function
     void displaySlot();
 };
-
 #endif

@@ -2,7 +2,11 @@
 #define ADMIN_H
 
 #include <iostream>
+#include <string>
+
 using namespace std;
+
+#include "ParkingSystem.h"
 
 class Admin {
 
@@ -13,11 +17,11 @@ private:
 
 public:
 
-    // Constructor
     Admin();
 
-    // Login Function
     bool login();
+
+    void adminMenu(ParkingSystem &system);
 };
 
 #endif

@@ -1,47 +1,36 @@
-#include <iostream>
-
-#include "ParkingSystem.h"
-#include "Admin.h"
 #include "User.h"
 #include "UI.h"
 
-using namespace std;
+// =========================================
+// USER MENU
+// =========================================
 
-int main() {
-
-    ParkingSystem system;
-    Admin admin;
-    User user;
+void User::userMenu(ParkingSystem &system) {
 
     int choice;
 
-    UI::showWelcome();
-
-    UI::showDateTime();
-
     do {
+
+        UI::clearScreen();
 
         cout << endl;
 
-        UI::typingEffect("SYSTEM STATUS        : ONLINE");
-        UI::typingEffect("SMART TERMINALS      : ACTIVE");
+        UI::setColor("green");
+        UI::loadingMessage("WELCOME TO USER INTERFACE");
+        UI::resetColor();
 
         cout << endl;
 
         cout << "========================================" << endl;
-        UI::setColor("cyan");
-        cout << "        SMART PARKING SYSTEM            " << endl;
+        UI::setColor("blue");
+        cout << "              USER PANEL                " << endl;
         UI::resetColor();
         cout << "========================================" << endl;
 
-        cout << endl;
-
-        cout << " [1] System Information" << endl;
-        cout << " [2] User Panel" << endl;
-        cout << " [3] Admin Panel" << endl;
-        cout << " [0] Shutdown System" << endl;
-
-        cout << endl;
+        cout << " [1] View Parking Slots" << endl;
+        cout << " [2] Park Vehicle" << endl;
+        cout << " [3] Vehicle Exit & Payment" << endl;
+        cout << " [0] Return To Main Menu" << endl;
 
         cout << "========================================" << endl;
         UI::setColor("green");
@@ -56,17 +45,20 @@ int main() {
             case 1:
 
                 UI::clearScreen();
-                UI::showSystemInfo();
+
+                system.showSlots();
+
                 UI::pauseScreen();
-                UI::clearScreen();
 
                 break;
 
             case 2:
 
                 UI::clearScreen();
-    
-                user.userMenu(system);
+
+                system.parkVehicle();
+
+                UI::pauseScreen();
 
                 break;
 
@@ -74,10 +66,9 @@ int main() {
 
                 UI::clearScreen();
 
-                if(admin.login()) {
+                system.exitVehicle();
 
-                    admin.adminMenu(system);
-                }
+                UI::pauseScreen();
 
                 break;
 
@@ -85,7 +76,13 @@ int main() {
 
                 UI::clearScreen();
 
-                UI::shutdown();
+                UI::setColor("cyan");
+
+                UI::loadingMessage("Returning To Main Menu");
+
+                UI::resetColor();
+
+                UI::clearScreen();
 
                 UI::delay(1);
 
@@ -103,6 +100,4 @@ int main() {
         }
 
     } while(choice != 0);
-
-    return 0;
 }

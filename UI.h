@@ -15,6 +15,22 @@ public:
     static void showDateTime();
 
     static void clearScreen();
+
+    static void pauseScreen();
+
+    static void loadingMessage(string message);
+
+    static void typingEffect(string text);
+
+    static void setColor(string color);
+
+    static void resetColor();
+
+    static void shutdown();
+
+    static void showSystemInfo();
+
+    static void delay(int seconds);
 };
 
 #endif

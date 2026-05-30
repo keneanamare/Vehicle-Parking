@@ -36,6 +36,9 @@ public:
 
     // Display Ticket
     void displayTicket();
+
+    // Display QR code
+    void displayQRCode();
 };
 
 #endif

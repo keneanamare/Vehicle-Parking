@@ -18,11 +18,14 @@ private:
 
     vector<ParkingSlot> slots;
     vector<Ticket> tickets;
+    vector<Receipt> receipts;
+    vector<string> history;
 
     int nextTicketID;
     int nextReceiptID;
 
     double totalRevenue;
+    double dailyRevenue;
 
 public:
 
@@ -32,11 +35,21 @@ public:
     // Core Functions
     void showSlots();
 
+    void searchVehicle();
+
+    void showStatistics();
+
+    void showParkingOverview();
+
     void parkVehicle();
 
     void exitVehicle();
 
     void showRevenue();
+
+    void generateDailyReport();
+
+    void showParkingMap();
 
 // FILE FUNCTIONS
     void saveHistory(
@@ -47,7 +60,17 @@ public:
 
     void saveRevenue();
 
+    void savereceipt();
+
+    void loadHistory();
+
+    void loadRevenue();
+
     void viewHistory();
+
+    void saveActiveTickets();
+
+    void loadActiveTickets();
 };
 
 #endif
