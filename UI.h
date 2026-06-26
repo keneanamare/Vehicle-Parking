@@ -7,6 +7,7 @@ using namespace std;
 class UI {
 
 public:
+
     static void loadingAnimation();
 
     static void showWelcome();
@@ -30,6 +31,8 @@ public:
     static void showSystemInfo();
 
     static void delay(int seconds);
+
+    static bool getValidChoice(int &value);
 };
 
 #endif

@@ -5,6 +5,8 @@ The Smart Parking Management System is an Object-Oriented Programming (OOP) proj
 
 This project demonstrates real-world implementation of Object-Oriented Programming concepts such as classes, objects, encapsulation, inheritance, polymorphism, abstraction, constructors, destructors, modular programming, and software design principles.
 
+---
+
 # 🎯 Project Objectives
 
 - Automate parking management operations
@@ -16,6 +18,8 @@ This project demonstrates real-world implementation of Object-Oriented Programmi
 - Demonstrate practical implementation of OOP concepts
 - Improve software modularity and scalability
 
+---
+
 # 🛠️ Technologies Used
 
 | Technology | Purpose |
@@ -25,6 +29,8 @@ This project demonstrates real-world implementation of Object-Oriented Programmi
 | STL Vector | Dynamic Data Storage |
 | File Handling (Optional) | Data Persistence |
 | HTML/CSS/JavaScript (Future Upgrade) | Web Interface |
+
+---
 
 # 📚 OOP Concepts Implemented
 
@@ -44,6 +50,8 @@ The project uses multiple classes such as:
 
 Objects are created from these classes to simulate real-world parking operations.
 
+---
+
 ## 2. Encapsulation
 Private data members are used to protect system data such as:
 - ticketID
@@ -53,15 +61,20 @@ Private data members are used to protect system data such as:
 
 Public getter and setter functions provide controlled access to data.
 
+---
+
 ## 3. Inheritance
 The project uses single inheritance.
 
 Example:
-    class Car : public Vehicle
+class Car : public Vehicle
+
 
 How to compile and run the program
 
 first do this in your compiler
     g++ main.cpp Vehicle.cpp ParkingSlot.cpp Ticket.cpp Receipt.cpp ParkingSystem.cpp UI.cpp User.cpp -o ParkingSystem
+    or just copy and paste this 
+    g++ *.cpp -o Parkingsystem     // this means it build all .cpp files in one parkingsystem file
 then run this command
     ./ParkingSystem

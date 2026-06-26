@@ -1,1 +1,12 @@
-## Daily report stored here ##
+========== DAILY REPORT ==========
+  Date: Tue Jun 23 10:30:22 2026
+
+  Cars: 0
+  Buses: 0
+  Trucks: 0
+  Bikes: 0
+  Motorcycles: 0
+  Occupied Slots: 0
+  Available Slots: 80
+  Total Revenue: 3923 Birr
+========================================

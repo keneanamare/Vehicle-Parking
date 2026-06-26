@@ -1,4 +1,3 @@
-## History stored here ##
 ET-45638 | Car | 10 Birr
 DR-475 | Bike | 5 Birr
 ET434636 | Car | 10 Birr
@@ -11,3 +10,38 @@ et | Truck | 15 Birr
 121621 | Truck | 15 Birr
 ET72375 | Car | 10 Birr
 jy77258 | Bike | 5 Birr
+ET453634 | Car | 10 Birr
+dfw451 | Car | 10 Birr
+gf499785 | Car | 10 Birr
+ct87549 | Bus | 15 Birr
+ft8740 | Motorcycle | 15 Birr
+fhd5638 | Truck | 15 Birr
+kdj7438 | Bus | 20 Birr | Sat May 23 17:06:45 2026
+hd73896 | Truck | 15 Birr | Sat May 23 17:12:30 2026
+cjj74849 | Bike | 5 Birr | Sat May 23 17:31:59 2026
+ET4321 | Car | 10 Birr | Sat May 23 18:13:50 2026
+ET4566 | Car | 10 Birr | Sat May 23 21:32:32 2026
+dre432 | Truck | 15 Birr | Sat May 23 22:50:10 2026
+re345 | Car | 10 Birr | Mon May 25 01:52:40 2026
+etgo6767 | Bus | 20 Birr | Mon May 25 02:18:32 2026
+fe43 | Motorcycle | 3 Birr | Mon May 25 02:30:16 2026
+ETbus | Bus | 20 Birr | Mon May 25 11:02:08 2026
+ET5678 | Car | 10 Birr | Mon May 25 11:49:55 2026
+ETmotor | Motorcycle | 12 Birr | Mon May 25 14:50:03 2026
+ | Car | 10 Birr | Mon May 25 21:59:54 2026
+ | Car | 90 Birr | Tue May 26 19:57:15 2026
+GTA56 | Bus | 600 Birr | Tue May 26 20:00:05 2026
+ET1223 | Car | 300 Birr | Tue May 26 20:00:53 2026
+ETbike | Bike | 410 Birr | Thu May 28 20:25:18 2026
+ETtruck | Truck | 1230 Birr | Thu May 28 20:27:15 2026
+qtr34 | Truck | 1170 Birr | Thu May 28 20:31:25 2026
+ | Car | 10 Birr | Thu May 28 22:44:01 2026
+05790 | Car | 10 Birr | Fri May 29 09:40:50 2026
+ET12345 | Car | 10 Birr | Fri May 29 11:31:44 2026
+ET31245 | Truck | 15 Birr | Fri May 29 11:33:57 2026
+ET21345 | Bus | 20 Birr | Fri May 29 11:50:24 2026
+ET41235 | Bike | 5 Birr | Fri May 29 11:53:43 2026
+ET51234 | Motorcycle | 6 Birr | Fri May 29 12:00:10 2026
+ET123 | Bike | 5 Birr | Mon Jun  1 10:46:57 2026
+ET123 | Car | 10 Birr | Mon Jun  1 21:36:42 2026
+ET1234 | Car | 680 Birr | Tue Jun 23 10:28:24 2026

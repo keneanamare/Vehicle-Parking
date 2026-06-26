@@ -88,8 +88,7 @@ void Ticket::displayQRCode(){
     cout << "+----------------------+" << endl;
 
     cout << endl;
-    UI::setColor("green");
-    cout << "      QR Verification Active" << endl;
-    UI::resetColor();
+
+    cout << "QR Verification Active" << endl;
     cout << "=================================" << endl;
 }

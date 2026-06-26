@@ -94,7 +94,7 @@ void ParkingSystem::parkVehicle() {
     cout << "========================================" << endl;
 
     cout << "Select Vehicle Type : ";
-    cin >> choice;
+    if (!UI::getValidChoice(choice)) choice = -1;
 
     if(choice < 1 || choice > 5){
 
@@ -111,6 +111,16 @@ void ParkingSystem::parkVehicle() {
 
     cout << "\nEnter Vehicle Plate Number : ";
     cin >> plate;
+
+    for (size_t i = 0; i < tickets.size(); i++) {
+        if (tickets[i].getPlateNumber() == plate) {
+            UI::setColor("red");
+            cout << "\nThis vehicle is already parked!" << endl;
+            UI::resetColor();
+            UI::delay(2);
+            return;
+        }
+    }
 
 switch(choice){
     case 1:
@@ -137,6 +147,7 @@ switch(choice){
         UI::setColor("red");
         cout << "Invalid Choice. Try Again." << endl;
         UI::resetColor();
+
         UI::delay(2);
 
         parkVehicle(); // re-open same menu
@@ -232,7 +243,7 @@ void ParkingSystem::exitVehicle() {
     UI::setColor("green");
     cout << "Select Option : ";
     UI::resetColor();
-    cin >> option;
+    if (!UI::getValidChoice(option)) option = -1;
 
     if(option == 1){
 
@@ -288,25 +299,12 @@ void ParkingSystem::exitVehicle() {
 
             // FEE CALCULATION
 
-            double fee;
-            
-            if(tickets[i].getVehicleType() == "Car"){
-                fee = hours * 10;
+            double fee = 0;
+            Vehicle* tempVehicle = createVehicle(tickets[i].getVehicleType(), tickets[i].getPlateNumber());
+            if(tempVehicle != nullptr){
+                fee = tempVehicle->calculateFee(hours);
+                delete tempVehicle;
             }
-            else if(tickets[i].getVehicleType() == "Bus"){
-                fee = hours * 20;
-            }
-            else if(tickets[i].getVehicleType() == "Truck"){
-                fee = hours * 15;
-            }
-            else if(tickets[i].getVehicleType() == "Bike"){
-                fee = hours * 5;
-            }
-            else if(tickets[i].getVehicleType() == "Motorcycle"){
-                fee = hours * 3;
-            }
-            totalRevenue += fee;
-            dailyRevenue += fee;
 
             // FREE SLOT
 
@@ -323,7 +321,6 @@ void ParkingSystem::exitVehicle() {
             // CREATE RECEIPT
 
             Receipt receipt(
-
                 nextReceiptID,
 
                 tickets[i].getTicketID(),
@@ -337,7 +334,7 @@ void ParkingSystem::exitVehicle() {
             );
 
             receipts.push_back(receipt);
-            savereceipt();
+            savereceipt(nextReceiptID, tickets[i].getTicketID(), tickets[i].getVehicleType(), tickets[i].getPlateNumber(), tickets[i].getSlotNumber(), fee, hours, remainingMinutes);
 
             UI::setColor("green");
 
@@ -1022,15 +1019,23 @@ void ParkingSystem::loadRevenue(){
 //     SAVE RECEIPT
 // ========================================
 
-void ParkingSystem::savereceipt() {
+void ParkingSystem::savereceipt(int receiptID, int ticketID, string type, string plate, int slot, double fee, int hours, int minutes) {
 
     ofstream file(
-        "data/receipt.txt"
+        "data/receipt.txt",
+        ios::app
     );
 
     if (file.is_open()) {
 
-        file << totalRevenue;
+        file << "Receipt #" << receiptID
+             << " | Ticket #" << ticketID
+             << " | " << type
+             << " | " << plate
+             << " | Slot " << slot
+             << " | " << hours << "h " << minutes << "m"
+             << " | " << fee << " Birr" << endl;
+
         file.close();
     }
 }

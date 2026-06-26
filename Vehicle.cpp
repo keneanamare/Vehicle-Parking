@@ -17,9 +17,11 @@ Vehicle::Vehicle(string plate, string type) {
 string Vehicle::getPlateNumber() {
     return plateNumber;
 }
+
 string Vehicle::getVehicleType() {
     return vehicleType;
 }
+
 time_t Vehicle::getEntryTime() {
     return entryTime;
 }
@@ -93,5 +95,17 @@ Motorcycle::Motorcycle(string plate)
 
 double Motorcycle::calculateFee(int hours)
 {
-    return hours * 20;
+    return hours * 3;
+}
+// ========================================
+//    create vehicle implementation
+// ========================================
+
+Vehicle* createVehicle(string type, string plate) {
+    if (type == "Car") return new Car(plate);
+    else if (type == "Bus") return new Bus(plate);
+    else if (type == "Truck") return new Truck(plate);
+    else if (type == "Bike") return new Bike(plate);
+    else if (type == "Motorcycle") return new Motorcycle(plate);
+    else return nullptr;
 }

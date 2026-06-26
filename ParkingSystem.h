@@ -15,6 +15,7 @@ using namespace std;
 class ParkingSystem {
 
 private:
+
     vector<ParkingSlot> slots;
     vector<Ticket> tickets;
     vector<Receipt> receipts;
@@ -59,7 +60,7 @@ public:
 
     void saveRevenue();
 
-    void savereceipt();
+    void savereceipt(int receiptID, int ticketID, string type, string plate, int slot, double fee, int hours, int minutes);
 
     void loadHistory();
 

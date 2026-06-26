@@ -16,6 +16,7 @@ int main() {
     int choice;
 
     UI::showWelcome();
+
     UI::showDateTime();
 
     do {
@@ -46,7 +47,7 @@ int main() {
         UI::setColor("green");
         cout << "Select Option : ";
         UI::resetColor();
-        cin >> choice;
+        if (!UI::getValidChoice(choice)) choice = -1;
 
         UI::loadingAnimation();
 

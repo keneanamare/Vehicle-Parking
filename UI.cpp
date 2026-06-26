@@ -8,6 +8,7 @@
 
 #include <ctime>
 #include <string>
+#include <limits>
 
 // =========================================
 // LOADING ANIMATION
@@ -20,8 +21,14 @@ void UI::loadingAnimation() {
     cout << "Loading System";
 
     for(int i = 0; i < 5; i++) {
+
         cout << ".";
+
+        #ifdef _WIN32
+        Sleep(400);
+        #else
         usleep(400000);
+        #endif
     }
 
     cout << endl;
@@ -46,7 +53,7 @@ void UI::showWelcome() {
     cout << "\n========================================" << endl;
     UI::setColor("cyan");
     cout << "    MENSCHEN FUR MENSCHEN FOUNDATION    " << endl;
-    cout << " AGRO TECHNICAL AND TECHNOLOGY COLLAGE  " << endl;
+    cout << " AGRO TECHNICAL AND TECHNOLOGY COLLEGE  " << endl;
     UI::resetColor();
     cout << "========================================" << endl;
     UI::setColor("cyan");
@@ -78,7 +85,11 @@ void UI::showDateTime() {
 // =========================================
 
 void UI::clearScreen() {
-    system("clear");
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
 }
 
 // =========================================
@@ -103,7 +114,11 @@ void UI::loadingMessage(string message){
         cout << ".";
         cout.flush();
 
-        sleep(1);
+        #ifdef _WIN32
+            Sleep(1000);
+        #else
+            sleep(1);
+        #endif
     }
     cout << "\n\n";
 }
@@ -115,7 +130,11 @@ void UI::loadingMessage(string message){
 void UI::typingEffect(string text){
     for(char c : text){
         cout << c << flush;
-        usleep(30000);
+        #ifdef _WIN32
+            Sleep(30);
+        #else
+            usleep(30000);
+        #endif
     }
     cout << endl;
 }
@@ -155,18 +174,10 @@ void UI::shutdown(){
     cout << "        SYSTEM SHUTDOWN SEQUENCE        " << endl;
     UI::resetColor();
     cout << "========================================" << endl;
-
-    UI::loadingMessage("\nClosing Parking Sessions...");
-    sleep(1);
-
-    UI::loadingMessage("\nSaving Parking Records...");
-    sleep(1);
-
-    UI::loadingMessage("\nDisconnecting Terminals...");
-    sleep(1);
-
-    UI::loadingMessage("\nSystem Shutdown Complete.");
-    sleep(1);
+    UI::loadingMessage("\nClosing Parking Sessions");
+    UI::loadingMessage("\nSaving Parking Records");
+    UI::loadingMessage("\nDisconnecting Terminals");
+    UI::typingEffect("\nSystem Shutdown Complete.");
 
     cout << endl;
 
@@ -309,4 +320,14 @@ void UI::delay(int seconds){
     sleep(seconds);
 #endif
 
+}
+
+bool UI::getValidChoice(int &value) {
+    cin >> value;
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        return false;
+    }
+    return true;
 }

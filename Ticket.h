@@ -12,6 +12,7 @@ private:
 
     string plateNumber;
     string vehicleType;
+
     time_t entryTime;
 
 public:
